@@ -20,13 +20,10 @@ def generate_Players(howmuch: int = 1, locale: str = "en_US") -> list[Player]:
 if __name__ == '__main__':
     n = 100
     mylist = generate_Players(n)
-    for i in range(n):
-        print(mylist[i])
-        with open("player_list.txt", "w") as players_file:
-            n = 100
-            mylist = generate_Players(n)
-            for i in range(n):
-                if i == 99:
-                    players_file.write(str(mylist[i]))
-                players_file.write("{0}\n".format(str(mylist[i])))
+    with open("player_list.txt", "w") as players_file:
+        n = 100
+        mylist = generate_Players(n)
+        for i in range(n):
+            print(mylist[i])
+            players_file.write("{0}\n".format(str(mylist[i])))
 #endregion
