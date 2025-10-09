@@ -1,10 +1,13 @@
-def Create_Players(n: int) -> list[Player]:
-    fake = Faker()
-    new_id = generate_id()
-    return [Player(
-        "P-" + (str(i).zfill(6)),
-        fake.name, generate_id(6), fake.country)]
+#TODO: A lenti fuggveny implementalasa user id helyett race id-ra.
+#race-id-kat generalo function, amik a kovetkezokepp epulnek fel
+# 6 jegyu, random kis es nagybetukbol, szamokbol
 
+def generate_id() -> str:
+    chars = string.ascii_letters + string.digits
+    return ''.join([choice(chars) for _ in range(6)])
+
+#TODO: a fentihez hasonlo id generator (user id), de a felepitese:
+# 7 jegyu szam
 
 newlist = []
     for x in range(10):
