@@ -8,6 +8,11 @@ class Player:
     name: str
     country: str
 
+def __init__(self, id: str, name: str, country: str):
+    self.id = id
+    self.name = name
+    self.country = country
+
 @dataclass
 class CarClass:
     id: str
