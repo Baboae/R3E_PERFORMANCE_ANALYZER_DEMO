@@ -4,3 +4,8 @@ def Create_Players(n: int) -> list[Player]:
     return [Player(
         "P-" + (str(i).zfill(6)),
         fake.name, generate_id(6), fake.country)]
+
+
+newlist = []
+    for x in range(10):
+        newlist.append(list(range(10)))
