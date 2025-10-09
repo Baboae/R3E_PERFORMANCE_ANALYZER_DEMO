@@ -1,0 +1,6 @@
+def Create_Players(n: int) -> list[Player]:
+    fake = Faker()
+    new_id = generate_id()
+    return [Player(
+        "P-" + (str(i).zfill(6)),
+        fake.name, generate_id(6), fake.country)]

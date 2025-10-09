@@ -7,14 +7,14 @@ from data.basic.model_classes import Player
 def generate_id() -> str:
     chars = string.ascii_letters + string.digits
     return ''.join([choice(chars) for _ in range(6)])
-
-def Create_Players(n: int) -> list[Player]:
+def generate_players(n: int) -> list[Player]:
     fake = Faker()
-    new_id = generate_id()
-    return [Player(
-        "P-" + (str(i).zfill(6)),
-        fake.name, generate_id(6), fake.country)]
+    for i in range(n):
+        return [Player(
+            "P-" + generate_id(),
+            fake.name(),
+            fake.country())]
 if __name__ == "__main__":
-    players = Create_Players(5)
-    for p in players:
-        print(p)
+    i = 1
+    for i in range(4):
+        print(generate_players(i))
